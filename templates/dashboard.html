@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat datang, {{ username }}!</h1>
+    <p>Ini adalah halaman dashboard Anda.</p>
+
+    <a href="/upload" class="btn btn-primary">Upload PDF</a>
+    <a href="/files" class="btn btn-primary">Lihat File PDF</a>
+    <a href="/konversi" class="btn btn-primary">Konversi PDF ke DOCX</a>
+
+    <form action="/logout" method="post" style="margin-top: 20px;">
+        <input type="submit" value="Logout" class="btn btn-danger">
+    </form>
+</body>
+</html>
