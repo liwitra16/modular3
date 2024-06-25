@@ -1,12 +1,13 @@
+import os
 import psycopg2
 
 class DataManager:
     def __init__(self):
         self.connection_params = {
-            'host': 'localhost',
-            'database': 'login_example',
-            'user': 'postgres',
-            'password': 'khanza22'
+            'host': os.environ.get('POSTGRES_HOST', 'db'),
+            'database': os.environ.get('POSTGRES_DB', 'login_example'),
+            'user': os.environ.get('POSTGRES_USER', 'postgres'),
+            'password': os.environ.get('POSTGRES_PASSWORD', 'khanza22')
         }
 
     def connect_db(self):
